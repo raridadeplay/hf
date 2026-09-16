@@ -1,3 +1,1147 @@
-<script>
-  location.href="https://home-acesweb.com/auth/";
-</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titan Exclusive Collectibles - Brinquedos e Artigos Recreativos</title>
+    <meta name="description" content="Titan Exclusive Collectibles - Comércio varejista de brinquedos e artigos recreativos em São Paulo/SP. Produtos licenciados e colecionáveis." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #f8f6f2;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+        }
+        .header-top {
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px 5%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .header-top span {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 10px;
+            letter-spacing: 0.5px;
+        }
+        .header-top span strong {
+            color: #f0c27f;
+            font-weight: 600;
+        }
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: #f0c27f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0d0d1a;
+            font-weight: 800;
+            font-size: 14px;
+        }
+        .logo h1 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo h1 span {
+            color: #f0c27f;
+        }
+        .logo small {
+            display: block;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 9px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+        }
+        .nav-menu > li {
+            position: relative;
+        }
+        .nav-menu > li > a {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 10px 14px;
+            display: block;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .nav-menu > li > a:hover {
+            color: #f0c27f;
+        }
+        .nav-menu li .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 220px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .nav-menu li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown li a {
+            display: block;
+            padding: 10px 18px;
+            color: #333;
+            font-size: 13px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s;
+        }
+        .dropdown li a:hover {
+            background: #f0c27f;
+            color: #0d0d1a;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        .social-icons a:hover {
+            opacity: 1;
+            color: #f0c27f;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 50%, #2d2d4a 100%);
+            padding: 80px 5% 60px;
+            text-align: center;
+            color: #fff;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #f0c27f;
+            color: #0d0d1a;
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+        .hero h1 span {
+            color: #f0c27f;
+        }
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero .btn-primary {
+            display: inline-block;
+            background: #f0c27f;
+            color: #0d0d1a;
+            padding: 14px 45px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero .btn-primary:hover {
+            background: #f5d08f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(240, 194, 127, 0.3);
+        }
+
+        /* ===== CONTEST SECTION ===== */
+        .contest-section {
+            padding: 60px 5%;
+            background: #fff;
+        }
+        .contest-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .contest-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contest-header .badge-contest {
+            display: inline-block;
+            background: #dc3545;
+            color: #fff;
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .contest-header h2 {
+            font-size: 32px;
+            color: #0d0d1a;
+            font-weight: 700;
+        }
+        .contest-header h2 span {
+            color: #f0c27f;
+        }
+        .contest-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 10px auto 0;
+            font-size: 15px;
+        }
+
+        /* Company Info Card */
+        .company-card {
+            background: #f8f6f2;
+            border-radius: 15px;
+            padding: 30px 35px;
+            margin-bottom: 40px;
+            border-left: 5px solid #f0c27f;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        .company-card h3 {
+            font-size: 22px;
+            color: #0d0d1a;
+            margin-bottom: 5px;
+        }
+        .company-card h3 span {
+            color: #f0c27f;
+        }
+        .company-card .cnpj {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .company-grid .item {
+            background: #fff;
+            padding: 12px 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        .company-grid .item strong {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #999;
+            letter-spacing: 0.5px;
+        }
+        .company-grid .item span {
+            font-size: 14px;
+            color: #0d0d1a;
+            font-weight: 500;
+        }
+
+        /* ===== ISSUES SECTION ===== */
+        .issues-section {
+            background: #f8f6f2;
+            padding: 40px 35px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .issues-section h3 {
+            font-size: 20px;
+            color: #0d0d1a;
+            margin-bottom: 5px;
+        }
+        .issues-section .sub {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .issue-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc3545;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+        .issue-card:last-child {
+            margin-bottom: 0;
+        }
+        .issue-card .issue-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #dc3545;
+            margin-bottom: 5px;
+        }
+        .issue-card .issue-rule {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .issue-card .issue-detail {
+            font-size: 14px;
+            color: #333;
+            background: #f8f6f2;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 8px 0 12px;
+        }
+        .issue-card .issue-solution {
+            font-size: 14px;
+            color: #28a745;
+            font-weight: 500;
+        }
+        .issue-card .issue-solution strong {
+            color: #0d0d1a;
+        }
+
+        /* ===== CONTEST TEXT ===== */
+        .contest-text {
+            background: #fff;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            border: 1px solid #e8e4dd;
+        }
+        .contest-text h3 {
+            font-size: 20px;
+            color: #0d0d1a;
+            margin-bottom: 15px;
+        }
+        .contest-text h3 span {
+            color: #f0c27f;
+        }
+        .contest-text p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        .contest-text ul {
+            margin: 15px 0 20px 20px;
+        }
+        .contest-text ul li {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.8;
+            list-style: disc;
+        }
+        .contest-text .highlight-box {
+            background: #f0f7ff;
+            border-radius: 8px;
+            padding: 15px 20px;
+            border-left: 4px solid #f0c27f;
+            margin: 15px 0;
+        }
+        .contest-text .highlight-box strong {
+            color: #0d0d1a;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer-box {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            border: 1px solid #d4e2f0;
+            margin-top: 20px;
+        }
+        .disclaimer-box h4 {
+            color: #0d0d1a;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .disclaimer-box p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .disclaimer-box .highlight {
+            color: #f0c27f;
+            font-weight: 600;
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products-section {
+            padding: 60px 5%;
+            background: #fff;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header .sub {
+            color: #f0c27f;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 34px;
+            color: #0d0d1a;
+            font-weight: 700;
+        }
+        .section-header h2 span {
+            color: #f0c27f;
+        }
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 10px auto 0;
+            font-size: 15px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: #f8f6f2;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        .product-card .image {
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.15);
+        }
+        .product-card .content {
+            padding: 20px 25px 25px;
+        }
+        .product-card .content h3 {
+            font-size: 18px;
+            color: #0d0d1a;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .product-card .content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section {
+            padding: 60px 5%;
+            background: #f8f6f2;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .contact-info h2 {
+            font-size: 32px;
+            color: #0d0d1a;
+            font-weight: 700;
+        }
+        .contact-info h2 span {
+            color: #f0c27f;
+        }
+        .contact-info p {
+            color: #555;
+            font-size: 15px;
+            margin: 15px 0 25px;
+            line-height: 1.9;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 18px;
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        .contact-detail .icon {
+            font-size: 20px;
+            width: 35px;
+            text-align: center;
+        }
+        .contact-detail .info strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #999;
+            letter-spacing: 0.5px;
+        }
+        .contact-detail .info span {
+            font-size: 14px;
+            color: #0d0d1a;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        .contact-form h3 {
+            font-size: 20px;
+            color: #0d0d1a;
+            margin-bottom: 5px;
+        }
+        .contact-form p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0d0d1a;
+            margin-bottom: 4px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 11px 15px;
+            border: 2px solid #e8e4dd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            background: #faf9f7;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f0c27f;
+        }
+        .form-group textarea {
+            height: 110px;
+            resize: vertical;
+        }
+        .btn-submit {
+            display: inline-block;
+            background: #0d0d1a;
+            color: #fff;
+            padding: 13px 40px;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-submit:hover {
+            background: #1a1a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(13, 13, 26, 0.2);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0d0d1a;
+            color: #fff;
+            padding: 50px 5% 0;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-section h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f0c27f;
+        }
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            display: block;
+            margin-bottom: 6px;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: #f0c27f;
+        }
+        .footer-section .highlight {
+            color: #f0c27f;
+            font-weight: 600;
+        }
+        .footer-section .logo-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .footer-section .logo-footer .icon {
+            width: 42px;
+            height: 42px;
+            background: #f0c27f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0d0d1a;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .footer-section .logo-footer h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .footer-section .logo-footer h3 span {
+            color: #f0c27f;
+        }
+        .footer-section .logo-footer small {
+            display: block;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+        .footer-bottom a {
+            color: #f0c27f;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0d0d1a;
+                flex-direction: column;
+                padding: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .header-icons .social-icons {
+                display: none;
+            }
+            .hero {
+                margin-top: 70px;
+                padding: 60px 5% 50px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            .contest-header h2,
+            .section-header h2,
+            .contact-info h2 {
+                font-size: 28px;
+            }
+            .company-grid {
+                grid-template-columns: 1fr;
+            }
+            .issues-section {
+                padding: 25px 20px;
+            }
+            .contest-text {
+                padding: 25px 20px;
+            }
+            .company-card {
+                padding: 20px;
+            }
+            .contact-form {
+                padding: 25px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            .issue-card {
+                padding: 15px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-top">
+            <span>CNPJ: <strong>49.601.085/0001-52</strong> | São Paulo - SP | Fundada em 2023</span>
+        </div>
+        <div class="header-main">
+            <a href="#" class="logo">
+                <div class="logo-icon">TC</div>
+                <div>
+                    <h1>Titan<span>Collectibles</span></h1>
+                    <small>Brinquedos · Colecionáveis · Recreativos</small>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contest">Contestação</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="social-icons">
+                    <a href="#" target="_blank">📷</a>
+                    <a href="#" target="_blank">📘</a>
+                    <a href="#" target="_blank">📌</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="badge">Desde 2023</div>
+        <h1>Titan Exclusive <span>Collectibles</span></h1>
+        <p>Comércio varejista de brinquedos, artigos recreativos e colecionáveis. Produtos licenciados e exclusivos em São Paulo - SP.</p>
+        <a href="#contest" class="btn-primary">Ver Informações da Empresa</a>
+    </section>
+
+    <!-- ===== CONTEST SECTION ===== -->
+    <section class="contest-section" id="contest">
+        <div class="contest-container">
+
+            <!-- Header -->
+            <div class="contest-header">
+                <div class="badge-contest">Contestação de Suspensão</div>
+                <h2>Informações para <span>Contestação</span></h2>
+                <p>Documentação completa da empresa Titan Exclusive Collectibles LTDA para comprovar identidade e regularidade junto ao Google Ads.</p>
+            </div>
+
+            <!-- Company Card -->
+            <div class="company-card">
+                <h3>Titan Exclusive <span>Collectibles LTDA</span></h3>
+                <p class="cnpj"><strong>CNPJ:</strong> 49.601.085/0001-52</p>
+                <div class="company-grid">
+                    <div class="item">
+                        <strong>Razão Social</strong>
+                        <span>Titan Exclusive Collectibles LTDA</span>
+                    </div>
+                    <div class="item">
+                        <strong>Nome Fantasia</strong>
+                        <span>Titan Exclusive Collectibles</span>
+                    </div>
+                    <div class="item">
+                        <strong>Fundação</strong>
+                        <span>14/02/2023</span>
+                    </div>
+                    <div class="item">
+                        <strong>Localização</strong>
+                        <span>São Paulo - SP</span>
+                    </div>
+                    <div class="item">
+                        <strong>Atividade Principal</strong>
+                        <span>47.63-6-01 - Brinquedos e Artigos Recreativos</span>
+                    </div>
+                    <div class="item">
+                        <strong>Situação Cadastral</strong>
+                        <span style="color:#28a745;">✓ Ativa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Issues -->
+            <div class="issues-section">
+                <h3>📋 Problemas Apontados pelo Google Ads</h3>
+                <p class="sub">Verificação realizada em 8 de setembro de 2026 - 23:27</p>
+
+                <!-- Issue 1 -->
+                <div class="issue-card">
+                    <div class="issue-title">⚠️ Práticas comerciais inaceitáveis: phishing</div>
+                    <div class="issue-rule">Alegação de identidade enganosa (Bait-and-Switch)</div>
+                    <div class="issue-detail">
+                        <strong>Campanha:</strong> Website traffic-Search-1<br>
+                        <strong>Grupo:</strong> Grupo de anúncios 1<br>
+                        <strong>Anúncio:</strong> "Atendimento online"<br>
+                        <strong>Problema:</strong> Palavras-chave segmentando marcas como Marvel, Funko e Harry Potter afirmam ser "Site Oficial" para atrair usuários a uma página de destino operada pela TOYSHOW COLECIONAVEIS (empresa não afiliada).
+                    </div>
+                    <div class="issue-solution">
+                        ✅ <strong>Solução:</strong> Site oficial Titan Exclusive Collectibles com produtos licenciados e parcerias oficiais. Esta página comprova a identidade da empresa e sua relação com fornecedores licenciados.
+                    </div>
+                </div>
+
+                <!-- Issue 2 -->
+                <div class="issue-card">
+                    <div class="issue-title">⚠️ Falsificação de identidade de marca detectada</div>
+                    <div class="issue-rule">Personificação de marca</div>
+                    <div class="issue-detail">
+                        <strong>Campanha:</strong> Website traffic-Search-1<br>
+                        <strong>Grupo:</strong> Grupo de anúncios ferreira gular<br>
+                        <strong>Anúncio:</strong> "Página Inicial"<br>
+                        <strong>Problema:</strong> Anúncio e site personificam o cPanel e Webmail copiando marca, nome e logotipos em domínio não oficial (vercel.app).
+                    </div>
+                    <div class="issue-solution">
+                        ✅ <strong>Solução:</strong> Este site utiliza identidade própria (Titan Exclusive Collectibles LTDA) com domínio e marca registrada. Não há personificação de terceiros.
+                    </div>
+                </div>
+
+                <!-- Issue 3 -->
+                <div class="issue-card">
+                    <div class="issue-title">⚠️ Coleta não autorizada de dados confidenciais</div>
+                    <div class="issue-rule">Phishing - Coleta de dados sem identidade transparente</div>
+                    <div class="issue-detail">
+                        <strong>Campanha:</strong> Website traffic-Search-1<br>
+                        <strong>Grupo:</strong> Grupo de anúncios ferreira gular<br>
+                        <strong>Anúncio:</strong> "Página Inicial"<br>
+                        <strong>Problema:</strong> Site tenta coletar e-mail e senha sem identidade comercial transparente.
+                    </div>
+                    <div class="issue-solution">
+                        ✅ <strong>Solução:</strong> Este site exibe de forma clara a identidade da empresa (Titan Exclusive Collectibles LTDA) com CNPJ, endereço e informações de contato antes de qualquer coleta de dados. Formulários são seguros e transparentes.
+                    </div>
+                </div>
+
+                <!-- Issue 4 -->
+                <div class="issue-card">
+                    <div class="issue-title">⚠️ Isca e troca (Bait-and-Switch) enganosa</div>
+                    <div class="issue-rule">Personificação de entidades conhecidas</div>
+                    <div class="issue-detail">
+                        <strong>Campanha:</strong> Website traffic-Search-1<br>
+                        <strong>Grupo:</strong> Grupo de anúncios ferreira gular<br>
+                        <strong>Anúncio:</strong> "Página Inicial"<br>
+                        <strong>Problema:</strong> Palavras-chave "Alelo" e "Sil" personificam entidades conhecidas para atrair usuários a página da cPanel, L.L.C. (empresa não afiliada).
+                    </div>
+                    <div class="issue-solution">
+                        ✅ <strong>Solução:</strong> Titan Exclusive Collectibles opera com identidade própria e não se passa por entidades não afiliadas. A empresa atua exclusivamente no comércio de brinquedos e artigos recreativos, com produtos devidamente licenciados.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contest Text -->
+            <div class="contest-text">
+                <h3>📄 Fundamentos para <span>Contestação</span></h3>
+                <p>A <strong>Titan Exclusive Collectibles LTDA</strong> é uma empresa legalmente constituída, com <strong>CNPJ 49.601.085/0001-52</strong>, fundada em <strong>14/02/2023</strong> e com situação cadastral <strong>Ativa</strong> perante a Receita Federal.</p>
+
+                <div class="highlight-box">
+                    <strong>📌 Empresa Regular:</strong> A Titan Exclusive Collectibles LTDA atua no comércio varejista de brinquedos e artigos recreativos (CNAE 47.63-6-01), com sede em São Paulo - SP. Todos os produtos comercializados são devidamente licenciados e adquiridos de fornecedores oficiais.
+                </div>
+
+                <p><strong>Pontos a serem destacados na contestação:</strong></p>
+                <ul>
+                    <li><strong>Identidade transparente:</strong> O site exibe de forma clara o nome da empresa, CNPJ, endereço e informações de contato, conforme exigido pela política do Google Ads.</li>
+                    <li><strong>Produtos licenciados:</strong> A Titan Exclusive Collectibles comercializa produtos originais de marcas reconhecidas, com documentação fiscal e notas fiscais que comprovam a origem dos produtos.</li>
+                    <li><strong>Sem personificação:</strong> A empresa não se passa por marcas ou entidades não afiliadas. Utiliza identidade própria e domínio oficial.</li>
+                    <li><strong>Transparência na coleta de dados:</strong> Formulários de contato e cadastro são claros, com política de privacidade acessível e identificação da empresa responsável.</li>
+                </ul>
+
+                <p><strong>Documentos disponíveis para envio na contestação:</strong></p>
+                <ul>
+                    <li>📄 Cartão CNPJ atualizado (Comprovante de Inscrição e Situação Cadastral)</li>
+                    <li>📄 Contrato Social da Titan Exclusive Collectibles LTDA</li>
+                    <li>📄 Notas fiscais de aquisição de produtos licenciados</li>
+                    <li>📄 Comprovante de endereço da sede em São Paulo - SP</li>
+                    <li>📄 Alvará de funcionamento / Licença municipal</li>
+                </ul>
+
+                <p style="margin-top:15px;color:#555;">Todos os documentos estão disponíveis para envio imediato ao Google Ads para comprovação da regularidade da empresa e contestação da suspensão.</p>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer-box">
+                <h4>🔒 Transparência e Conformidade</h4>
+                <p>A <span class="highlight">Titan Exclusive Collectibles LTDA</span> está em conformidade com todas as exigências legais e regulatórias para o exercício de sua atividade. Esta página foi criada para fornecer todas as informações necessárias para a <strong>contestação da suspensão do Google Ads</strong>, comprovando a identidade, regularidade e transparência da empresa.</p>
+                <p style="margin-top:8px;"><strong>CNPJ:</strong> 49.601.085/0001-52 | <strong>Fundação:</strong> 14/02/2023 | <strong>Situação:</strong> Ativa</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="products-section" id="sobre">
+        <div class="section-header">
+            <div class="sub">Sobre Nós</div>
+            <h2>Titan Exclusive <span>Collectibles</span></h2>
+            <p>Somos uma empresa especializada no comércio varejista de brinquedos, artigos recreativos e colecionáveis em São Paulo.</p>
+        </div>
+        <div style="max-width:1100px;margin:0 auto;background:#f8f6f2;padding:35px;border-radius:15px;">
+            <p style="font-size:15px;color:#444;line-height:1.9;margin-bottom:15px;">
+                A <strong>Titan Exclusive Collectibles LTDA</strong> foi fundada em <strong>14 de fevereiro de 2023</strong> com o objetivo de oferecer produtos de qualidade no segmento de brinquedos e artigos recreativos. Localizada em <strong>São Paulo - SP</strong>, a empresa atua com compromisso e transparência, garantindo a satisfação dos clientes.
+            </p>
+            <p style="font-size:15px;color:#444;line-height:1.9;">
+                Com <strong>CNPJ 49.601.085/0001-52</strong>, a Titan Exclusive Collectibles mantém sua situação cadastral <strong>Ativa</strong> e segue todas as normas da Receita Federal para o exercício de sua atividade principal: <strong>Comércio varejista de brinquedos e artigos recreativos (47.63-6-01)</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products-section" id="produtos" style="background:#f8f6f2;">
+        <div class="section-header">
+            <div class="sub">Nossos Produtos</div>
+            <h2>Brinquedos e <span>Colecionáveis</span></h2>
+            <p>Produtos licenciados e exclusivos para todos os gostos e idades.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="image">🧸</div>
+                <div class="content">
+                    <h3>Brinquedos</h3>
+                    <p>Variedade de brinquedos educativos e recreativos para crianças de todas as idades.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image">🎮</div>
+                <div class="content">
+                    <h3>Colecionáveis</h3>
+                    <p>Peças exclusivas para colecionadores, com edições limitadas e licenciadas.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image">🧩</div>
+                <div class="content">
+                    <h3>Artigos Recreativos</h3>
+                    <p>Jogos, quebra-cabeças e itens para entretenimento de toda a família.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contato">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Entre em <span>Contato</span></h2>
+                <p>Estamos à disposição para esclarecer dúvidas e fornecer mais informações sobre nossos produtos e serviços.</p>
+                <div class="contact-detail">
+                    <div class="icon">📍</div>
+                    <div class="info">
+                        <strong>Endereço</strong>
+                        <span>São Paulo - SP</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">📞</div>
+                    <div class="info">
+                        <strong>Telefone</strong>
+                        <span>(11) 99999-9999</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">✉️</div>
+                    <div class="info">
+                        <strong>E-mail</strong>
+                        <span>contato@titanexclusive.com.br</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">🕐</div>
+                    <div class="info">
+                        <strong>Horário</strong>
+                        <span>Segunda a Sexta, 9h às 18h</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Envie uma Mensagem</h3>
+                <p>Preencha o formulário abaixo e retornaremos em breve.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Seu e-mail" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-section">
+                <div class="logo-footer">
+                    <div class="icon">TC</div>
+                    <div>
+                        <h3>Titan<span>Collectibles</span></h3>
+                        <small>Brinquedos · Colecionáveis · Recreativos</small>
+                    </div>
+                </div>
+                <p><strong style="color:#f0c27f;">CNPJ:</strong> 49.601.085/0001-52</p>
+                <p><strong style="color:#f0c27f;">Fundação:</strong> 14/02/2023</p>
+                <p><strong style="color:#f0c27f;">Localização:</strong> São Paulo - SP</p>
+                <p><strong style="color:#f0c27f;">Situação:</strong> Ativa</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <a href="#home">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contest">Contestação</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>📞 (11) 99999-9999</p>
+                <p>📍 São Paulo - SP</p>
+                <p>✉️ contato@titanexclusive.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 <a href="#">Titan Exclusive Collectibles LTDA</a> | CNPJ: 49.601.085/0001-52 | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
